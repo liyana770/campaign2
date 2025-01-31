@@ -1,0 +1,376 @@
+<html>
+<head>
+	<link rel="stylesheet" href="header-footer.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Sustainability with ZUS</title>
+	<style>
+		body {
+            font-family: 'Roboto', sans-serif;
+        }
+	
+		.hero-image {
+		  background-image: url("header.jpg");
+		  height: 100%;
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		  position: relative;
+		}
+
+		.hero-text {
+		  text-align: center;
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  color: white;
+		}
+
+		.gallery-btn {
+			font-size: 16px; 
+			padding: 12px 30px;
+			background-color: #fff; 
+			color: #093353; 
+			border: 2px solid #093353; 
+			border-radius: 5px;
+			cursor: pointer;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.gallery-btn:hover {
+			background-color: #093353; 
+			color: white; 
+			transform: scale(1.05);
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+		}
+
+        .flip-card-container {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          margin: 50px 0;
+        }
+
+        .flip-card {
+          background-color: transparent;
+          width: 300px;
+          height: 300px;
+          perspective: 1000px;
+        }
+
+        .flip-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+          transform: rotateY(180deg);
+        }
+
+    .flip-card-front, .flip-card-back {
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       -webkit-backface-visibility: hidden;
+       backface-visibility: hidden;
+   }
+
+    .flip-card-back {
+		background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+		color: #333; 
+		font-size: 14px;
+		line-height: 1.5; 
+		font-family: 'Roboto', sans-serif; 
+		font-weight: 300; 
+		padding: 20px; 
+		border-radius: 8px; 
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	}
+
+
+    .flip-card-back {
+		background-color: #2980b9;
+        color: #333;
+        transform: rotateY(180deg);
+    }
+		
+	.row {
+		display: flex; 
+		gap: 20px; 
+		justify-content: center; 
+		padding: 20px; 
+	}
+
+    .column {
+        padding: 40px;
+        height: 300px; 
+    }
+
+    .left {
+        width: 55%;
+        background-color: #fff;
+        color: black; 
+		line-height: 1.3em
+    }
+
+    .right {
+        width: 25%;
+        background-color: #fff;
+        color: black;
+    }
+		
+		#div1 {
+	  font-size:40px;
+	}
+	
+	.review-card {
+        transition: transform 0.3s ease;
+    }
+
+    .review-card:hover {
+        transform: translateY(-10px);
+    } 
+	</style>
+</head>
+
+<body>
+	<header>
+		<div id="myNav" class="overlay">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="overlay-content">
+				<a href="aboutus.html">About</a>
+				<a href="initiatives.html">Our Initiatives</a>
+				<a href="rewardprograms.html">Reward</a>
+				<a href="contact.html">Contact</a>
+			</div>
+		</div>
+
+		<span style="font-size:30px;cursor:pointer;color:white;" onclick="openNav()">&#9776;</span>
+
+		<script>
+			function openNav() {
+				document.getElementById("myNav").style.height = "100%";
+			}
+
+			function closeNav() {
+				document.getElementById("myNav").style.height = "0%";
+			}
+		</script>
+
+		<div class="logo">
+		<a href="index.html">
+        <img src="Logo.png" alt="ZUS Coffee Logo">
+		</a>
+		</div>
+
+		<div class="icons">
+			<i class="fa fa-user"></i>
+		</div>
+		
+	</header>
+	
+	<div class="hero-image">
+		<div class="hero-text">
+			<h1 style="font-size:35px; line-height: 2em;">Welcome to Sustainability with ZUS</h1>
+			<p style="font-size:20px; line-height: 3em;">Join us in making the world a greener place</p>
+			<a href="gallery.html">
+            <button class="gallery-btn">Gallery</button>
+        </a>
+		</div>
+	</div><br><br><br><br><br>
+
+    <h2 style="color: black; font-size: 2rem; text-align: center;">Overview</h2>
+
+    <div class="row">
+    <div class="column left" style="text-align: justify">
+        <p>At ZUS Coffee, we believe that meaningful change begins with small, impactful actions.
+		Our campaigns are dedicated to fostering sustainability and environmental consciousness.
+		From encouraging the use of reusable cups and introducing eco-friendly packaging to organizing 
+		tree-planting initiatives, we strive to minimize our ecological footprint. By working hand-in-hand with 
+		our customers and local communities, we aim to create a positive ripple effect that extends far beyond our 
+		coffee cups. Together, we envision a greener, more sustainable future where every sip contributes to protecting 
+		our planet for generations to come.</p>
+    </div>
+    <div class="column right">
+        <div>
+	        <img src="logo.jpg" alt="Avatar" style="width:200px;height:200px;">
+	      </div>
+    </div>
+    </div>
+	
+	<div class="container" style="margin-top: -30px; display: flex; justify-content: center; align-items: center;">
+    <a href="https://zuscoffee.com/our-story/" target="_blank">
+        <button class="gallery-btn">Learn more...</button>
+    </a>
+	</div>
+	
+	<br><br><br><br><br><br><br>
+
+	<h3 style="color: black; font-size: 2rem; text-align: center;">Key Features of the Campaign</h3>
+
+	<div class="flip-card-container">
+	  <div class="flip-card">
+	    <div class="flip-card-inner">
+	      <div class="flip-card-front">
+	        <img src="paper cup.jpg" alt="cup" style="width:300px;height:300px;">
+	      </div>
+	      <div class="flip-card-back">
+	        <h1 style="color: black; font-size: 1.5rem; text-align: center; margin-bottom: 20px;">Eco-Friendly Packaging</h1><br><br> 
+	        <p>We’re transitioning to 100% biodegradable and recyclable materials to reduce waste.</p> 
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="flip-card">
+	    <div class="flip-card-inner">
+	      <div class="flip-card-front">
+	        <img src="rebate.jpg" alt="cash" style="width:300px;height:300px;">
+	      </div>
+	      <div class="flip-card-back">
+	        <h1>Reusable Incentives</h1><br><br> 
+	        <p>Enjoy discounts and rewards when you bring your reusable cups or tumblers.</p> 
+	      </div>
+	    </div>
+	  </div>
+
+	  <div class="flip-card">
+	    <div class="flip-card-inner">
+	      <div class="flip-card-front">
+	        <img src="plant.jpg" alt="tree" style="width:300px;height:300px;">
+	      </div>
+	      <div class="flip-card-back">
+	        <h1>Community Engagement</h1><br><br> 
+	        <p>Participate in workshops, clean-up drives, and tree-planting events to make a tangible difference.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div><br><br><br><br>
+	
+	<table width="100%" cellspacing="0" cellpadding="0" style="text-align: center; background-color: #f4f8f9; padding: 50px;">
+    <tr>
+        <td colspan="3" style="padding-bottom: 50px;">
+            <h2 style="color: black; font-size: 2rem; margin: 0;">What Our Users Say    <div id="div1" class="fa"></div></h2>
+			
+	<script>
+	function ratestar() {
+	  var a;
+	  a = document.getElementById("div1");
+	  a.innerHTML = "&#xf006;";
+	  setTimeout(function () {
+		  a.innerHTML = "&#xf123;";
+		}, 1000);
+	  setTimeout(function () {
+		  a.innerHTML = "&#xf005;";
+		}, 2000);
+	}
+	ratestar();
+	setInterval(ratestar, 3000);
+	</script>
+	
+        </td>
+    </tr>
+    <tr>
+        <td style="padding: 20px;" class="review-card">
+            <div style="background-color: white; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 30px; max-width: 350px; margin: 0 auto;">
+                <img src="xiaozhan.jpg" alt="Avatar" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px;">
+                <p style="font-style: italic; color: #333;">“ZUS has truly made me more mindful of my environmental impact. I love that I can earn rewards just by using my reusable cup! It feels great knowing that every sip is contributing to a more sustainable future.”</p>
+                <h3 style="margin: 15px 0 5px; color: black;">Theo</h3>
+				<p style="color: black; margin: 5px 0; font-style: italic;">Regular Customer</p>
+            </div>
+        </td>
+        <td style="padding: 20px;" class="review-card">
+            <div style="background-color: white; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 30px; max-width: 350px; margin: 0 auto;">
+                <img src="JOJO.jpg" alt="Avatar" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px;">
+                <p style="font-style: italic; color: #333;">“I’m thrilled with the rewards program. I’ve redeemed points for exclusive eco-friendly merchandise, and it makes me feel like I’m part of something bigger. Plus, the app tracks my progress, so I can see how much I've contributed!”</p>
+                <h3 style="margin: 15px 0 5px; color: black;">Ali</h3>
+                <p style="color: black; margin: 5px 0; font-style: italic;">Loyal Member</p>
+            </div>
+        </td>
+        <td style="padding: 20px;" class="review-card">
+            <div style="background-color: white; border-radius: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); padding: 30px; max-width: 350px; margin: 0 auto;">
+                <img src="mina.jpg" alt="Avatar" style="width: 100px; height: 100px; border-radius: 50%; margin-bottom: 20px;">
+                <p style="font-style: italic; color: #333;">“The sustainability initiatives ZUS has in place are amazing. I’ve been a part of their program for weeks, and it’s so rewarding to see the positive impact. I love the sense of community we’re building together.”</p>
+                <h3 style="margin: 15px 0 5px; color: black;">Mina</h3>
+                <p style="color: black; margin: 5px 0; font-style: italic;">Eco-conscious Enthusiast</p>
+            </div>
+        </td>
+    </tr>
+</table>
+<br><br><br><br>
+
+	<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>About ZUS</h3>
+            <p style="font-size: 14px">ZUS is dedicated to fostering sustainability through innovation, collaboration, and education. Join us in creating a greener future for all.</p>
+        </div>
+
+        <div class="footer-column">
+			<h3>Contact Info</h3>
+            <ul>
+                <li><a href="#">ZUS COMMERCE (M) SDN BHD (1381281-T)
+				(Formerly known as ZUS Coffee (M) SDN BHD))</a></li>
+                <li><a href="#">zcm-support@zuscoffee.com</a></li>
+                <li><a href="#">Unit 21-7, Binjai 8, No. 2, Lorong Binjai, Kuala Lumpur Wilayah Persekutuan</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>News & Updates</h3>
+            <ul>
+                <li><a href="https://zuscoffee.com/social-impact/community-engagement/" target="_blank">Build A Strong Community Together - Community Engagement</a></li>
+                <li><a href="https://zuscoffee.com/social-impact/environmental-initiatives/" target="_blank">Environmental Initiatives - Brewing A Greener Future</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Initiatives</a></li>
+                <li><a href="#">Volunteer with ZUS</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        &copy; 2025 Sustainability with ZUS - All rights reserved.
+    </div>
+    
+    <div class="social-media">
+		<a href="https://www.tiktok.com/@zuscoffee" target="_blank" class="fa fa-facebook"></a>
+		<a href="https://www.facebook.com/ZUSCoffeeMY/" target="_blank" class="fa fa-twitter"></a>
+		<a href="https://www.instagram.com/zus.coffee" target="_blank" class="fa fa-instagram"></a>
+    </div>
+</footer>
+	
+		<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+	
+	<script>
+		let mybutton = document.getElementById("myBtn");
+
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		  } else {
+			mybutton.style.display = "none";
+		  }
+		}
+
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+		</script>
+	
+</body>
+</html>

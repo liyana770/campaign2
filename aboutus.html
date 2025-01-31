@@ -1,0 +1,485 @@
+<html>
+<head>
+	<link rel="stylesheet" href="header-footer.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Sustainability with ZUS</title>
+	<style>
+		header {
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  padding: 1rem 5%;
+		  background-color: #093353;
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+		  z-index: 999;
+		  overflow: visible;
+		}
+
+		/* Dropdown container */
+		.dropdown {
+		  position: relative;
+		  display: inline-block;
+		}
+
+		/* Dropdown button */
+		.dropbtn {
+		  background-color: transparent;
+		  color: white;
+		  font-size: 16px;
+		  border: none;
+		  padding: 10px 15px;
+		  cursor: pointer;
+		}
+
+		/* Style the dropdown content */
+		.dropdown-content {
+		  display: none;
+		  position: absolute;
+		  background-color: white;
+		  min-width: 160px;
+		  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+		  z-index: 1000;
+		  border-radius: 5px;
+		}
+
+		/* Style dropdown links */
+		.dropdown-content a {
+		  color: black;
+		  padding: 10px 15px;
+		  text-decoration: none;
+		  display: block;
+		  font-size: 14px;
+		}
+
+		/* Hover effects */
+		.dropdown-content a:hover {
+		  background-color: #f1f1f1;
+		}
+
+		/* Show dropdown on hover */
+		.dropdown:hover .dropdown-content {
+		  display: block;
+		}
+
+		.hero-video {
+			position: relative;
+			width: 100%;
+			height: 100vh;
+			overflow: hidden;
+		}
+
+		.hero-video video {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: -1;
+		}
+
+		.hero-text {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			color: white;
+		}
+
+		.timeline {
+		  position: relative;
+		  max-width: 1200px;
+		  margin: 0 auto;
+		}
+
+		.timeline::after {
+		  content: '';
+		  position: absolute;
+		  width: 6px;
+		  background-color: black;
+		  top: 0;
+		  bottom: 0;
+		  left: 50%;
+		  margin-left: -3px;
+		}
+
+		.container {
+		  padding: 10px 40px;
+		  position: relative;
+		  background-color: inherit;
+		  width: 50%;
+		}
+
+		.container::after {
+		  content: '';
+		  position: absolute;
+		  width: 25px;
+		  height: 25px;
+		  right: -17px;
+		  background-color: white;
+		  border: 4px solid #FF9F55;
+		  top: 15px;
+		  border-radius: 50%;
+		  z-index: 1;
+		}
+
+		.left {
+		  left: 0;
+		}
+
+		.right {
+		  left: 50%;
+		}
+
+		.left::before {
+		  content: " ";
+		  height: 0;
+		  position: absolute;
+		  top: 22px;
+		  width: 0;
+		  z-index: 1;
+		  right: 30px;
+		  border: medium solid white;
+		  border-width: 10px 0 10px 10px;
+		  border-color: transparent transparent transparent white;
+		}
+
+		.right::before {
+		  content: " ";
+		  height: 0;
+		  position: absolute;
+		  top: 22px;
+		  width: 0;
+		  z-index: 1;
+		  left: 30px;
+		  border: medium solid white;
+		  border-width: 10px 10px 10px 0;
+		  border-color: transparent white transparent transparent;
+		}
+
+		.right::after {
+		  left: -16px;
+		}
+
+		.content {
+		  padding: 20px 30px;
+		  background-color: white;
+		  position: relative;
+		  border-radius: 6px;
+		  border: 4px solid #FF9F55;
+		}
+
+		@media screen and (max-width: 600px) {
+		  /* Place the timelime to the left */
+		  .timeline::after {
+		  left: 31px;
+		  }
+		  
+		  /* Full-width containers */
+		  .container {
+		  width: 100%;
+		  padding-left: 70px;
+		  padding-right: 25px;
+		  }
+		  
+		  .container::before {
+		  left: 60px;
+		  border: medium solid white;
+		  border-width: 10px 10px 10px 0;
+		  border-color: transparent white transparent transparent;
+		  }
+
+		  .left::after, .right::after {
+		  left: 15px;
+		  }
+		  
+		  .right {
+		  left: 0%;
+		  }
+		  
+		.gallery-container {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px; 
+			justify-content: center; 
+			margin-top: 20px;
+		}
+
+		.polaroid {
+			flex: 0 1 calc(25% - 20px); 
+			box-sizing: border-box;
+			border: 1px solid #ccc;
+			background: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+		
+		.polaroid img {
+        max-width: 100%;
+        height: auto; 
+        display: block;
+        margin: 0 auto;
+		}
+
+		.polaroid .desc {
+			margin-top: 10px;
+			font-size: 14px;
+			color: #555;
+		}
+		
+		.polaroid img {
+			width: 100%; 
+			height: auto;
+		}
+
+		table {
+			border-spacing: 0; 
+			margin: 0 auto;    
+			padding: 0;      
+		}
+
+		.desc {
+			font-size: 14px;
+			color: #333;
+			margin-top: 5px;
+		}
+		
+		 .slide-in {
+		opacity: 0;
+		transform: translateX(-50px);
+		animation: slideIn 1s ease-out forwards;
+	}
+	
+	html {
+		scroll-behavior: smooth;
+	}
+
+	
+	</style>
+</head>
+
+<body>
+	<header>
+		<div id="myNav" class="overlay">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="overlay-content">
+				<a href="index.html">Home</a>
+				<a href="aboutus.html">About</a>
+				<a href="initiatives.html">Our Initiatives</a>
+				<a href="rewardprograms.html">Reward</a>
+				<a href="contact.html">Contact</a>
+			</div>
+		</div>
+
+		<span style="font-size:30px;cursor:pointer;color:white;" onclick="openNav()">&#9776;</span>
+
+		<script>
+			function openNav() {
+				document.getElementById("myNav").style.height = "100%";
+			}
+
+			function closeNav() {
+				document.getElementById("myNav").style.height = "0%";
+			}
+		</script>
+		
+		  <div class="dropdown">
+    <button class="dropbtn">Content ▼</button>
+    <div class="dropdown-content">
+        <a href="#our-story">Our Story</a>
+        <a href="#mission-values">Mission & Values</a>
+        <a href="#cups-of-change">Cups of Change</a>
+    </div>
+</div>
+
+		  
+		<div class="logo">
+		<a href="index.html">
+        <img src="Logo.png" alt="ZUS Coffee Logo">
+		</a>
+		</div>
+
+		  <div class="icons">
+			<i class="fa fa-user"></i>
+		  </div>
+</header>
+
+	</header>
+
+	<div class="hero-video">
+    <video autoplay muted loop playsinline preload="auto">
+        <source src="coffee.mp4" type="video/mp4">
+        <source src="coffee.webm" type="video/webm">
+    </video>
+    <div class="hero-text">
+        <h1 style="font-size:35px; line-height: 2em;">Welcome to Sustainability with ZUS</h1>
+        <p style="font-size:20px; line-height: 3em;">Join us in making the world a greener place</p>
+    </div>
+	</div>
+	<br><br><br><br><br>
+
+    <h1 id="our-story" align="center">OUR STORY</h1><br><br><br>
+
+		<div class="timeline">
+		  <div class="container left"> 
+			<div class="content">
+			  <h2 style="line-height: 1.5em;">2023 - The Vision Begins</h2>
+			  <p style="line-height: 1.2em;">Every movement starts with an idea. In 2019, we recognized the urgent need for change. The increasing waste, environmental neglect, and unsustainable practices called for immediate action. Our campaign was born from a desire to make a difference—one small step at a time.</p>
+			</div>
+		  </div>
+		  <div class="container right">
+			<div class="content">
+			  <h2 style="line-height: 1.5em;">2023 - Laying the Foundation</h2>
+			  <p style="line-height: 1.2em;">As we grew, so did our mission. We started with community outreach programs, raising awareness about sustainable living and responsible consumption. Through partnerships and local initiatives, we built a foundation for meaningful impact.</p>
+			</div>
+		  </div>
+		  <div class="container left">
+			<div class="content">
+			  <h2 style="line-height: 1.5em;">2024 - Driving Change Through Action</h2>
+			  <p style="line-height: 1.2em;">Sustainability is more than just an idea—it’s a lifestyle. In 2021, we introduced our first hands-on initiatives: eco-friendly packaging, reusable programs, and waste reduction strategies. People joined us in making a real impact, proving that small changes lead to big results.</p>
+			</div>
+		  </div>
+		  <div class="container right">
+			<div class="content">
+			  <h2 style="line-height: 1.5em;">2024 - Expanding Our Reach</h2>
+			  <p style="line-height: 1.2em;">What started as a local effort gained national attention. We partnered with businesses, schools, and organizations to spread awareness and drive change on a larger scale. Together, we proved that sustainability is not just a trend—it’s the future.</p>
+			</div>
+		  </div>
+		  <div class="container left">
+			<div class="content">
+			  <h2 style="line-height: 1.5em;">2025 - A Greener Tomorrow</h2>
+			  <p style="line-height: 1.2em;">Today, our campaign continues to inspire and innovate. We are committed to pushing boundaries, challenging industries, and empowering individuals to take action. Sustainability is a journey, and together, we are shaping a greener, more responsible world.</p>
+			</div>
+		  </div>
+		</div><br><br><br><br><br>
+
+<table width="100%" cellspacing="0" cellpadding="0" style="text-align: center; background-color: #f4f8f9; padding: 50px;">
+    <tr>
+        <td colspan="3" style="padding-bottom: 20px;">
+		<div style="text-align: center; padding: 20px;">
+		<h2 id="mission-values" style="color: black; font-size: 2rem; margin: 0; text-align: center;" class="slide-in">
+			Our Mission & Values
+		</h2><br><br>
+		<ul style="list-style-type: none; padding: 0;">
+        <li style="margin-bottom: 20px;">
+            <i class="fa fa-globe" style="font-size: 30px; color: darkblue;"></i>
+            <h3 style="margin: 10px 0;">Sustainability</h3>
+            <p>We aim to lead the way in sustainable coffee practices, reducing our footprint on the planet.</p>
+        </li><br><br>
+        <li style="margin-bottom: 20px;">
+            <i class="fa fa-heart" style="font-size: 30px; color: darkblue;"></i>
+            <h3 style="margin: 10px 0;">Community</h3>
+            <p>Our heart lies in building connections with our customers and supporting local communities.</p>
+        </li><br><br>
+        <li style="margin-bottom: -15px;">
+            <i class="fa fa-coffee" style="font-size: 30px; color: darkblue;"></i>
+            <h3 style="margin: 10px 0;">Quality</h3>
+            <p>We are dedicated to crafting exceptional coffee experiences in every cup.</p>
+        </li>
+    </ul>
+</div>
+</td>
+</tr>
+</table><br><br>
+		
+		<table style="width: 100%; table-layout: fixed; padding: 0;">
+    <tr>
+        <td style="width: 50%; padding: 20px;">
+            <table style="width: 100%; background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); margin: 0;">
+                <tr>
+                    <td style="padding: 30px; text-align: center;">
+                        <h2 id="cups-of-change" style="color: black; font-size: 2rem; margin: 0; text-align: center;" class="slide-in">
+							Cups of Change
+						</h2><br><br>
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/M-iJM02m_Hg?si=_c--kszzA22ZuT36" 
+						title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+						gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table><br><br><br><br>
+
+	<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>About ZUS</h3>
+            <p style="font-size: 14px">ZUS is dedicated to fostering sustainability through 
+			innovation, collaboration, and education. Join us in creating a greener future for all.</p>
+        </div>
+
+        <div class="footer-column">
+			<h3>Contact Info</h3>
+            <ul>
+                <li><a href="#">ZUS COMMERCE (M) SDN BHD (1381281-T)
+				(Formerly known as ZUS Coffee (M) SDN BHD))</a></li>
+                <li><a href="#">zcm-support@zuscoffee.com</a></li>
+                <li><a href="#">Unit 21-7, Binjai 8, No. 2, Lorong Binjai, Kuala Lumpur Wilayah Persekutuan</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>News & Updates</h3>
+            <ul>
+                <li><a href="https://zuscoffee.com/social-impact/community-engagement/" target="_blank">Build A Strong Community Together - Community Engagement</a></li>
+                <li><a href="https://zuscoffee.com/social-impact/environmental-initiatives/" target="_blank">Environmental Initiatives - Brewing A Greener Future</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Initiatives</a></li>
+                <li><a href="#">Volunteer with ZUS</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+            &copy; 2025 Sustainability with ZUS - All rights reserved.
+        </div>
+		
+        <div class="social-media">
+           <div class="social-media">
+			<a href="https://www.tiktok.com/@zuscoffee" target="_blank" class="fa fa-facebook"></a>
+			<a href="https://www.facebook.com/ZUSCoffeeMY/" target="_blank" class="fa fa-twitter"></a>
+			<a href="https://www.instagram.com/zus.coffee" target="_blank" class="fa fa-instagram"></a>
+			</div>
+        </div>
+    </footer>
+	
+		<button onclick="topFunction()" id="myBttn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+	
+	<script>
+		// Get the button
+		let mybutton = document.getElementById("myBtn");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		  } else {
+			mybutton.style.display = "none";
+		  }
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+		</script>
+	
+</body>
+</html>

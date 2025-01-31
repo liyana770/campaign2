@@ -1,0 +1,278 @@
+<html>
+<head>
+	<link rel="stylesheet" href="header-footer.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Rewards - Sip Sustainably with ZUS</title>
+  <style>
+    
+		.container {
+		  padding: 20px;
+		  text-align: center;
+		}
+
+		.section-title {
+		  color: #5D4037;
+		  font-size: 24px;
+		  margin-bottom: 20px;
+		}
+
+		.rewards-row {
+		  display: flex;
+		  justify-content: center;
+		  flex-wrap: wrap;
+		  gap: 20px;
+		}
+
+		.reward-card {
+		  background-color: #000435;
+		  border-radius: 10px;
+		  padding: 20px;
+		  width: 250px;
+		  height: 300px;
+		  text-align: center;
+		  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		  cursor: pointer;
+		}
+
+		.reward-card img {
+		  width: 80px;
+		  margin-bottom: 10px;
+		}
+
+		.reward-card h3 {
+		  color: #FFFFFF;
+		  margin: 10px 0;
+		}
+
+		.reward-card p {
+		  font-size: 12px;
+		  color: #666666;
+		}
+
+		/* Modal Styles */
+		.modal {
+		  display: none;
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  background-color: rgba(0, 0, 0, 0.5);
+		  z-index: 1;
+		}
+
+		.modal-content {
+		  background-color: white;
+		  margin: 15% auto;
+		  padding: 20px;
+		  border-radius: 10px;
+		  width: 60%;
+		  text-align: center;
+		  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		}
+
+		.modal-content h2 {
+		  margin-bottom: 10px;
+		  color: #006D5B;
+		}
+
+		.modal-content p {
+		  font-size: 14px;
+		  color: #666666;
+		}
+
+		.close {
+		  position: absolute;
+		  top: 10px;
+		  right: 25px;
+		  font-size: 24px;
+		  cursor: pointer;
+		  color: #134f25;
+		}
+  </style>
+</head>
+
+<body>
+  <header>
+		<!-- Navigation Menu -->
+		<div id="myNav" class="overlay">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="overlay-content">
+				<a href="index.html">Home</a>
+				<a href="aboutus.html">About</a>
+				<a href="initiatives.html">Our Initiatives</a>
+				<a href="rewardprograms.html">Reward</a>
+				<a href="contact.html">Contact</a>
+			</div>
+		</div>
+
+		<span style="font-size:30px;cursor:pointer;color:white;" onclick="openNav()">&#9776;</span>
+
+		<script>
+			function openNav() {
+				document.getElementById("myNav").style.height = "100%";
+			}
+
+			function closeNav() {
+				document.getElementById("myNav").style.height = "0%";
+			}
+		</script>
+
+		<div class="logo">
+		<a href="index.html">
+        <img src="Logo.png" alt="ZUS Coffee Logo">
+		</a>
+		</div>
+
+		<div class="icons">
+			<i class="fa fa-shopping-cart"></i>
+		</div>
+	</header><br><br><br><br><br><br><br>
+
+  <div class="container">
+    <h2 class="section-title">How It Works</h2>
+    <div class="rewards-row">
+ 
+      <div class="reward-card" onclick="openModal('modal1')">
+        <img src="2.jpg" alt="Earn Points">
+        <h3>Earn Points</h3>
+        <p>Bring a reusable cup and get rewarded instantly.</p>
+      </div>
+
+ 
+      <div class="reward-card" onclick="openModal('modal2')">
+        <img src="3.jpg" alt="Redeem Rewards">
+        <h3>Redeem Rewards</h3>
+        <p>Redeem points for drinks, merchandise, and more.</p>
+      </div>
+
+  
+      <div class="reward-card" onclick="openModal('modal3')">
+        <img src="4.jpg" alt="Track Progress">
+        <h3>Track Progress</h3>
+        <p>Use our app to monitor your sustainability impact.</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal1')">&times;</span>
+      <h2>Earn Points</h2>
+      <p>Did you know? Using a reusable cup saves 500 single-use cups annually. Keep earning those points!</p>
+    </div>
+  </div>
+
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal2')">&times;</span>
+      <h2>Redeem Rewards</h2>
+      <p>Use 100 points to get an eco-friendly coffee tumbler. Don't miss out on exclusive deals!</p>
+    </div>
+  </div>
+
+  <div id="modal3" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('modal3')">&times;</span>
+      <h2>Track Progress</h2>
+      <p>See how many cups you've saved this month. Track your sustainability impact in our app.</p>
+    </div>
+  </div><br><br><br><br><br><br><br>
+
+  <script>
+    function openModal(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+
+    window.onclick = function(event) {
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    };
+  </script>
+  
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>About ZUS</h3>
+            <p style="font-size: 14px">ZUS is dedicated to fostering sustainability through 
+			innovation, collaboration, and education. Join us in creating a greener future for all.</p>
+        </div>
+
+        <div class="footer-column">
+			<h3>Contact Info</h3>
+            <ul>
+                <li><a href="#">ZUS COMMERCE (M) SDN BHD (1381281-T)
+				(Formerly known as ZUS Coffee (M) SDN BHD))</a></li>
+                <li><a href="#">zcm-support@zuscoffee.com</a></li>
+                <li><a href="#">Unit 21-7, Binjai 8, No. 2, Lorong Binjai, Kuala Lumpur Wilayah Persekutuan</a></li>
+            </ul>
+        </div>
+		
+        <div class="footer-column">
+            <h3>News & Updates</h3>
+            <ul>
+                <li><a href="https://zuscoffee.com/social-impact/community-engagement/" target="_blank">Build A Strong Community Together - Community Engagement</a></li>
+                <li><a href="https://zuscoffee.com/social-impact/environmental-initiatives/" target="_blank">Environmental Initiatives - Brewing A Greener Future</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Initiatives</a></li>
+                <li><a href="#">Volunteer with ZUS</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+            &copy; 2025 Sustainability with ZUS - All rights reserved.
+        </div>
+		
+        <div class="social-media">
+           <div class="social-media">
+			<a href="https://www.tiktok.com/@zuscoffee" target="_blank" class="fa fa-facebook"></a>
+			<a href="https://www.facebook.com/ZUSCoffeeMY/" target="_blank" class="fa fa-twitter"></a>
+			<a href="https://www.instagram.com/zus.coffee" target="_blank" class="fa fa-instagram"></a>
+			</div>
+        </div>
+    </footer>
+	
+		<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+	
+	<script>
+		// Get the button
+		let mybutton = document.getElementById("myBtn");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		  } else {
+			mybutton.style.display = "none";
+		  }
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+		</script>
+  
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover More Latte Art - Zus Coffee</title>
+	<link rel="stylesheet" href="header-footer.css">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Gallery Section */
+        .gallery-page-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-page-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            aspect-ratio: 1 / 1; /* Memastikan nisbah aspek 1:1 (persegi) */
+        }
+
+        .gallery-page-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Memastikan gambar memenuhi ruang tanpa mengubah nisbah aspek */
+            display: block;
+            border-radius: 8px;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin: 2rem auto;
+            padding: 10px 20px;
+            background-color: #0F4C81;
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #093353;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+		<!-- Navigation Menu -->
+		<div id="myNav" class="overlay">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<div class="overlay-content">
+				<a href="index.html">Home</a>
+				<a href="aboutus.html">About</a>
+				<a href="initiatives.html">Our Initiatives</a>
+				<a href="rewardprograms.html">Reward</a>
+				<a href="contact.html">Contact</a>
+			</div>
+		</div>
+
+		<span style="font-size:30px;cursor:pointer;color:white;" onclick="openNav()">&#9776;</span>
+
+		<script>
+			function openNav() {
+				document.getElementById("myNav").style.height = "100%";
+			}
+
+			function closeNav() {
+				document.getElementById("myNav").style.height = "0%";
+			}
+		</script>
+
+		<div class="logo">
+		<a href="index.html">
+        <img src="Logo.png" alt="ZUS Coffee Logo">
+		</a>
+		</div>
+
+		<div class="icons">
+			<i class="fa fa-user"></i>
+		 </div>
+	</header><br><br><br><br><br><br><br>
+
+    <section class="gallery-page-container">
+        <div class="gallery-page-item">
+            <img src="gallery/gallery2A.jpg" alt="Shop Atmosphere 1">
+        </div>
+        <div class="gallery-page-item">
+            <img src="gallery/gallery2B.jpg" alt="Shop Atmosphere 2">
+        </div>
+        <div class="gallery-page-item">
+            <img src="gallery/gallery2C.jpg" alt="Shop Atmosphere 3">
+        </div>
+        <div class="gallery-page-item">
+            <img src="gallery/gallery2D.jpg" alt="Shop Atmosphere 4">
+        </div>
+        <div class="gallery-page-item">
+            <img src="gallery/gallery2E.jpg" alt="Shop Atmosphere 5">
+        </div>
+        <div class="gallery-page-item">
+            <img src="gallery/gallery2F.jpg" alt="Shop Atmosphere 6">
+        </div>
+        <div class="gallery-page-item">
+            <img src="gallery/gallery2G.jpg" alt="Shop Atmosphere 7">
+        </div>
+        <div class="gallery-page-item">
+            <img src="gallery/gallery2H.jpg" alt="Shop Atmosphere 8">
+        </div>
+    </section>
+
+    <div style="text-align: center;">
+        <a href="gallery.html" class="back-button">Back to Gallery</a>
+    </div>
+
+     <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>About ZUS</h3>
+            <p style="font-size: 14px">ZUS is dedicated to fostering sustainability through 
+			innovation, collaboration, and education. Join us in creating a greener future for all.</p>
+        </div>
+
+        <div class="footer-column">
+			<h3>Contact Info</h3>
+            <ul>
+                <li><a href="#">ZUS COMMERCE (M) SDN BHD (1381281-T)
+				(Formerly known as ZUS Coffee (M) SDN BHD))</a></li>
+                <li><a href="#">zcm-support@zuscoffee.com</a></li>
+                <li><a href="#">Unit 21-7, Binjai 8, No. 2, Lorong Binjai, Kuala Lumpur Wilayah Persekutuan</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>News & Updates</h3>
+            <ul>
+                <li><a href="https://zuscoffee.com/social-impact/community-engagement/" target="_blank">Build A Strong Community Together - Community Engagement</a></li>
+                <li><a href="https://zuscoffee.com/social-impact/environmental-initiatives/" target="_blank">Environmental Initiatives - Brewing A Greener Future</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Initiatives</a></li>
+                <li><a href="#">Volunteer with ZUS</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+            &copy; 2025 Sustainability with ZUS - All rights reserved.
+        </div>
+		
+        <div class="social-media">
+           <div class="social-media">
+			<a href="https://www.tiktok.com/@zuscoffee" target="_blank" class="fa fa-facebook"></a>
+			<a href="https://www.facebook.com/ZUSCoffeeMY/" target="_blank" class="fa fa-twitter"></a>
+			<a href="https://www.instagram.com/zus.coffee" target="_blank" class="fa fa-instagram"></a>
+			</div>
+        </div>
+    </footer>
+	
+		<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+	
+	<script>
+		// Get the button
+		let mybutton = document.getElementById("myBtn");
+
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		  } else {
+			mybutton.style.display = "none";
+		  }
+		}
+
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+		</script>
+	
+</body>
+</html>
